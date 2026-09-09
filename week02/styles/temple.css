@@ -1,0 +1,104 @@
+/* Remove default browser spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General page styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: #111;
+    width: 400px;
+    margin: 8px auto;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 9px 5px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 14px;
+}
+
+/* Main content */
+main {
+    width: 214px;
+    margin: 0 auto;
+}
+
+/* Temple heading */
+h1 {
+    text-align: center;
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+/* Temple image */
+picture {
+    display: block;
+}
+
+picture img {
+    display: block;
+    width: 214px;
+    height: auto;
+    box-shadow: 8px 8px 15px #888;
+    margin-bottom: 16px;
+}
+
+/* Information sections */
+section {
+    background-color: #ddd;
+    padding: 10px;
+    margin-bottom: 12px;
+}
+
+/* Section headings */
+section h2 {
+    font-size: 13px;
+    border-bottom: 1px solid #999;
+    padding-bottom: 5px;
+    margin-bottom: 8px;
+}
+
+/* Section paragraphs */
+section p {
+    font-size: 9px;
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+
+/* Link */
+section a {
+    color: blue;
+}
+
+/* Visiting information list */
+section ul {
+    padding-left: 15px;
+}
+
+section li {
+    font-size: 9px;
+    line-height: 1.5;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 8px;
+    margin-top: 11px;
+}
+
+footer p {
+    font-size: 10px;
+}
