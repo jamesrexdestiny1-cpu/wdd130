@@ -1,0 +1,552 @@
+/* =========================================================
+   WDD130 - Week 03
+   Rafting Site - About Us Page
+   Student: James Rex Ovie
+
+   File: wwr/styles/rafting.css
+   ========================================================= */
+
+
+/* =========================================================
+   1. COLOR AND FONT VARIABLES
+   ========================================================= */
+
+:root {
+  --primary-color: #2c6e91;
+  --secondary-color: #f4a261;
+  --accent1-color: #264653;
+  --accent2-color: #e9c46a;
+
+  --heading-font: Georgia, "Times New Roman", serif;
+  --body-font: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================================================
+   2. UNIVERSAL RESET
+   Removes default browser spacing.
+   ========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   3. BODY
+   Controls the general appearance of the webpage.
+   ========================================================= */
+
+body {
+  font-family: var(--body-font);
+  color: var(--accent1-color);
+  background-color: #f5f8fa;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   4. MAIN PAGE WIDTH
+   Keeps the website centered and limits the content width.
+   ========================================================= */
+
+header,
+main,
+footer {
+  width: 840px;
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   5. HEADER
+   Creates a clean professional header area.
+   ========================================================= */
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 20px 30px;
+
+  background-color: #ffffff;
+  border-bottom: 4px solid var(--accent2-color);
+}
+
+
+/* =========================================================
+   6. LOGO
+   Controls the size of the rafting company logo.
+   ========================================================= */
+
+header img {
+  width: 120px;
+  height: auto;
+}
+
+
+/* =========================================================
+   7. MAIN NAVIGATION
+   Removes the default list styling and arranges the
+   navigation items horizontally.
+   ========================================================= */
+
+header nav {
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul {
+  display: flex;
+  gap: 10px;
+
+  list-style: none;
+
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =========================================================
+   8. NAVIGATION LINKS
+   Makes the navigation easier to read and more appealing.
+   ========================================================= */
+
+header nav a {
+  display: block;
+
+  color: var(--accent1-color);
+  text-decoration: none;
+  font-weight: bold;
+
+  padding: 10px 14px;
+  border-radius: 5px;
+}
+
+
+/* =========================================================
+   9. NAVIGATION HOVER EFFECT
+   Gives visual feedback when the user hovers over a link.
+   ========================================================= */
+
+header nav a:hover {
+  background-color: var(--primary-color);
+  color: #ffffff;
+}
+
+/* =========================================================
+   10. HEADINGS
+   Applies the heading font and primary color.
+   ========================================================= */
+
+h1,
+h2 {
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+}
+
+
+/* =========================================================
+   11. MAIN CONTENT
+   Gives the main page some visual separation.
+   ========================================================= */
+
+main {
+  background-color: #ffffff;
+}
+
+
+/* =========================================================
+   12. HERO CONTAINER
+   Creates a positioning reference for the hero content.
+   ========================================================= */
+
+.hero {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+
+/* =========================================================
+   13. HERO IMAGE
+   Makes the main rafting image fill the content width.
+   ========================================================= */
+
+.hero > img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+/* =========================================================
+   14. HERO HEADING
+   Places the main title over the hero image.
+   ========================================================= */
+
+.hero h1 {
+  position: absolute;
+
+  top: 20px;
+  left: 0;
+
+  width: 100%;
+
+  padding: 16px;
+
+  text-align: center;
+
+  background-color: var(--accent1-color);
+  color: #ffffff;
+
+  opacity: 0.9;
+}
+
+
+/* =========================================================
+   15. HERO ARTICLE
+   Creates the information box displayed over the hero.
+   ========================================================= */
+
+.hero article {
+  position: absolute;
+
+  left: 25px;
+  right: 25px;
+  bottom: 25px;
+
+  margin: 0;
+  padding: 15px;
+
+  background-color: rgba(255, 255, 255, 0.92);
+
+  border-radius: 6px;
+}
+
+
+/* =========================================================
+   16. CLIENT / EMPLOYEE IMAGE
+   Floats the smaller image to the right so the text wraps
+   around it.
+   ========================================================= */
+
+.hero article img {
+  float: right;
+
+  width: 125px;
+  height: auto;
+
+  margin: 0 0 10px 15px;
+
+  border-radius: 5px;
+}
+
+
+/* =========================================================
+   17. HERO ARTICLE PARAGRAPH
+   Controls the introductory paragraph inside the hero.
+   ========================================================= */
+
+.hero article p {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =========================================================
+   18. GENERAL NAVIGATION, PARAGRAPH, SECTION AND ARTICLE
+       SPACING
+   ========================================================= */
+
+nav,
+p,
+section,
+article {
+  margin: 16px;
+  padding: 8px;
+}
+
+
+/* =========================================================
+   19. HISTORY SECTION
+   Adds spacing and a visual separation between sections.
+   ========================================================= */
+
+main section {
+  margin: 25px 30px;
+  padding: 20px;
+
+  border-left: 5px solid var(--accent2-color);
+  background-color: #f8fafb;
+}
+
+
+/* =========================================================
+   20. SECTION HEADINGS
+   Gives section headings better visual hierarchy.
+   ========================================================= */
+
+section h2 {
+  margin-bottom: 10px;
+}
+
+
+/* =========================================================
+   21. FOOTER
+   Creates a clean professional footer.
+   ========================================================= */
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 20px 30px;
+
+  background-color: var(--accent1-color);
+  color: #ffffff;
+
+  border-top: 4px solid var(--accent2-color);
+}
+
+
+/* =========================================================
+   22. FOOTER COPYRIGHT
+   Removes unnecessary spacing around the copyright text.
+   ========================================================= */
+
+footer p {
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   23. SOCIAL MEDIA NAVIGATION
+   Places the social-media icons beside one another.
+   ========================================================= */
+
+.socialmedia {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =========================================================
+   24. SOCIAL MEDIA LINKS
+   Removes the default link underline.
+   ========================================================= */
+
+.socialmedia a {
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   25. SOCIAL MEDIA IMAGES
+   Prevents the Facebook, LinkedIn and Instagram icons
+   from appearing extremely large.
+   ========================================================= */
+
+footer .socialmedia img {
+  width: 40px !important;
+  height: 40px !important;
+
+  max-width: 40px;
+  max-height: 40px;
+
+  display: block;
+  object-fit: contain;
+}
+
+
+
+/* =========================================================
+   26. SOCIAL MEDIA HOVER EFFECT
+   Slightly enlarges the icon when the mouse is over it.
+   ========================================================= */
+
+.socialmedia img:hover {
+  transform: scale(1.1);
+}
+
+/* =========================================================
+   27. RESPONSIVE DESIGN
+   Allows the website to adapt to tablets and mobile phones.
+   ========================================================= */
+
+
+/* =========================================================
+   28. TABLET SCREEN
+   Applies when the screen is 840px wide or smaller.
+   ========================================================= */
+
+@media screen and (max-width: 840px) {
+
+  header,
+  main,
+  footer {
+    width: 100%;
+  }
+
+  header {
+    padding: 15px 20px;
+  }
+
+  main {
+    padding: 0;
+  }
+
+  .hero > img {
+    width: 100%;
+  }
+
+}
+
+
+/* =========================================================
+   29. SMALL TABLET / LARGE PHONE
+   Adjusts the header and navigation for narrower screens.
+   ========================================================= */
+
+@media screen and (max-width: 700px) {
+
+  header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  header nav ul {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  header nav a {
+    padding: 8px 10px;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+}
+
+
+/* =========================================================
+   30. MOBILE PHONE
+   Provides a comfortable layout for small phone screens.
+   ========================================================= */
+
+@media screen and (max-width: 600px) {
+
+  body {
+    font-size: 15px;
+  }
+
+
+  /* -------------------------
+     Header
+     ------------------------- */
+
+  header {
+    padding: 15px 10px;
+  }
+
+  header img {
+    width: 100px;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+  }
+
+  header nav a {
+    padding: 6px 12px;
+  }
+
+
+  /* -------------------------
+     Hero section
+     ------------------------- */
+
+  .hero {
+    margin-bottom: 15px;
+  }
+
+  .hero h1 {
+    top: 10px;
+    padding: 10px;
+    font-size: 1.5rem;
+  }
+
+
+  /* -------------------------
+     Hero article
+     ------------------------- */
+
+  .hero article {
+    position: relative;
+
+    left: auto;
+    right: auto;
+    bottom: auto;
+
+    margin: 0;
+    padding: 12px;
+
+    background-color: #ffffff;
+  }
+
+  .hero article img {
+    width: 100px;
+    margin-left: 10px;
+  }
+
+
+  /* -------------------------
+     Content sections
+     ------------------------- */
+
+  main section {
+    margin: 15px 10px;
+    padding: 15px;
+  }
+
+
+  /* -------------------------
+     Footer
+     ------------------------- */
+
+  footer {
+    padding: 15px 10px;
+  }
+
+  footer p {
+    margin: 0;
+  }
+
+  .socialmedia {
+    gap: 10px;
+  }
+
+  footer .socialmedia img {
+    width: 35px !important;
+    height: 35px !important;
+
+    max-width: 35px;
+    max-height: 35px;
+  }
+
+}
