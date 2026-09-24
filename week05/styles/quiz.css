@@ -1,0 +1,88 @@
+/* General page styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 40px 20px;
+    color: #222;
+}
+
+main {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+/* Heading */
+h1 {
+    text-align: center;
+    color: #1f3c88;
+    margin-bottom: 25px;
+}
+
+/* Form container */
+form {
+    background-color: #ffffff;
+    padding: 30px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Individual questions */
+.question {
+    margin-bottom: 22px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #1f3c88;
+}
+
+/* Form controls */
+input,
+textarea,
+select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid #999;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 2px solid #1f3c88;
+}
+
+/* Code styling */
+code {
+    background-color: #eeeeee;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+/* Submit button */
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1f3c88;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #162d68;
+}
