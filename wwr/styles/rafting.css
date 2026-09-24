@@ -273,7 +273,7 @@ footer {
 
 footer p {
     margin: 0;
-    color: var(--white);
+    color: var(--accent1-color);
     font-size: 0.85rem;
 }
 
