@@ -1,518 +1,408 @@
 /* =========================================================
-   WDD130 - Week 03
+   WDD130 - Week 04
    Rafting Site - About Us Page
    Student: James Rex Ovie
-
    File: wwr/styles/rafting.css
    ========================================================= */
 
-/* =========================================================
-   1. COLOR AND FONT VARIABLES
-   ========================================================= */
-
 :root {
-  --primary-color: #2c6e91;
-  --secondary-color: #f4a261;
-  --accent1-color: #264653;
-  --accent2-color: #e9c46a;
-
-  --heading-font: Georgia, "Times New Roman", serif;
-  --body-font: Arial, Helvetica, sans-serif;
+    --primary-color: #2c6e91;
+    --secondary-color: #f4a261;
+    --accent1-color: #264653;
+    --accent2-color: #e9c46a;
+    --light-bg: #f5f8fa;
+    --white: #ffffff;
+    --heading-font: Georgia, "Times New Roman", serif;
+    --body-font: Arial, Helvetica, sans-serif;
 }
-
-/* =========================================================
-   2. UNIVERSAL RESET
-   Removes default browser spacing.
-   ========================================================= */
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-
-/* =========================================================
-   3. BODY
-   Controls the general appearance of the webpage.
-   ========================================================= */
 
 body {
-  font-family: var(--body-font);
-  color: var(--accent1-color);
-  background-color: #f5f8fa;
-  line-height: 1.6;
+    font-family: var(--body-font);
+    color: var(--accent1-color);
+    background-color: var(--light-bg);
+    line-height: 1.6;
 }
-
-/* =========================================================
-   4. MAIN PAGE WIDTH
-   Keeps the website centered and limits the content width.
-   ========================================================= */
 
 header,
 main,
 footer {
-  width: 840px;
-  margin: 0 auto;
+    width: 840px;
+    max-width: 100%;
+    margin: 0 auto;
 }
 
 /* =========================================================
-   5. HEADER
-   Creates a clean professional header area.
+   HEADER - CSS GRID
+   The logo and navigation share one horizontal row.
    ========================================================= */
 
 header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  padding: 20px 30px;
-
-  background-color: #ffffff;
-  border-bottom: 4px solid var(--accent2-color);
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    align-items: center;
+    gap: 25px;
+    padding: 12px 30px;
+    background-color: var(--white);
+    border-bottom: 4px solid var(--accent2-color);
 }
 
-/* =========================================================
-   6. LOGO
-   Controls the size of the rafting company logo.
-   ========================================================= */
+.logo-link {
+    display: block;
+}
 
 header img {
-  width: 120px;
-  height: auto;
+    display: block;
+    width: 120px;
+    height: 85px;
+    margin: 0 auto;
+    object-fit: contain;
 }
 
 /* =========================================================
-   7. MAIN NAVIGATION
-   Removes the default list styling and arranges the
-   navigation items horizontally.
+   NAVIGATION - CSS FLEXBOX
+   The navigation list arranges the links horizontally.
    ========================================================= */
 
 header nav {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
-header nav ul {
-  display: flex;
-  gap: 10px;
-
-  list-style: none;
-
-  margin: 0;
-  padding: 0;
+.navigation {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-/* =========================================================
-   8. NAVIGATION LINKS
-   Makes the navigation easier to read and more appealing.
-   ========================================================= */
-
-header nav a {
-  display: block;
-
-  color: var(--accent1-color);
-  text-decoration: none;
-  font-weight: bold;
-
-  padding: 10px 14px;
-  border-radius: 5px;
+.navigation li {
+    flex: 0 0 auto;
 }
 
-/* =========================================================
-   9. NAVIGATION HOVER EFFECT
-   Gives visual feedback when the user hovers over a link.
-   ========================================================= */
+.navigation a {
+    display: block;
+    padding: 8px 14px;
+    color: var(--accent1-color);
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--white);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
 
-header nav a:hover {
-  background-color: var(--primary-color);
-  color: #ffffff;
+.navigation a:hover,
+.navigation a:focus {
+    color: var(--white);
+    background-color: var(--primary-color);
 }
 
 /* =========================================================
-   10. HEADINGS
-   Applies the heading font and primary color.
-   ========================================================= */
-
-h1,
-h2 {
-  font-family: var(--heading-font);
-  color: var(--primary-color);
-}
-
-/* =========================================================
-   11. MAIN CONTENT
-   Gives the main page some visual separation.
+   MAIN AND HEADINGS
    ========================================================= */
 
 main {
-  background-color: #ffffff;
+    background-color: var(--white);
+}
+
+h1,
+h2 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+}
+
+h2 {
+    margin-bottom: 12px;
+    text-align: center;
+    font-size: 1.5rem;
 }
 
 /* =========================================================
-   12. HERO CONTAINER
-   Creates a positioning reference for the hero content.
+   HERO
+   Retains the visual style from the previous work.
    ========================================================= */
 
 .hero {
-  position: relative;
-  margin-bottom: 25px;
+    position: relative;
+    margin-bottom: 25px;
 }
-
-/* =========================================================
-   13. HERO IMAGE
-   Makes the main rafting image fill the content width.
-   ========================================================= */
 
 .hero > img {
-  display: block;
-  width: 100%;
-  height: auto;
+    display: block;
+    width: 100%;
+    height: 375px;
+    object-fit: cover;
 }
-
-/* =========================================================
-   14. HERO HEADING
-   Places the main title over the hero image.
-   ========================================================= */
 
 .hero h1 {
-  position: absolute;
-
-  top: 20px;
-  left: 0;
-
-  width: 100%;
-
-  padding: 16px;
-
-  text-align: center;
-
-  background-color: var(--accent1-color);
-  color: #ffffff;
-
-  opacity: 0.9;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    padding: 14px;
+    text-align: center;
+    background-color: rgba(38, 70, 83, 0.92);
+    color: var(--white);
+    font-size: 2rem;
 }
-
-/* =========================================================
-   15. HERO ARTICLE
-   Creates the information box displayed over the hero.
-   ========================================================= */
 
 .hero article {
-  position: absolute;
-
-  left: 25px;
-  right: 25px;
-  bottom: 25px;
-
-  margin: 0;
-  padding: 15px;
-
-  background-color: rgba(255, 255, 255, 0.92);
-
-  border-radius: 6px;
+    position: absolute;
+    left: 25px;
+    right: 25px;
+    bottom: 25px;
+    min-height: 120px;
+    margin: 0;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.94);
+    border-radius: 6px;
 }
-
-/* =========================================================
-   16. CLIENT / EMPLOYEE IMAGE
-   Floats the smaller image to the right so the text wraps
-   around it.
-   ========================================================= */
 
 .hero article img {
-  float: right;
-
-  width: 125px;
-  height: auto;
-
-  margin: 0 0 10px 15px;
-
-  border-radius: 5px;
+    float: right;
+    width: 125px;
+    height: 85px;
+    margin: 0 0 10px 15px;
+    object-fit: cover;
+    border-radius: 5px;
 }
-
-/* =========================================================
-   17. HERO ARTICLE PARAGRAPH
-   Controls the introductory paragraph inside the hero.
-   ========================================================= */
 
 .hero article p {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
 }
 
 /* =========================================================
-   18. GENERAL NAVIGATION, PARAGRAPH, SECTION AND ARTICLE
-       SPACING
+   HISTORY
+   Three-column layout required by the updated wireframe.
    ========================================================= */
 
-nav,
-p,
-section,
-article {
-  margin: 16px;
-  padding: 8px;
+.history {
+    margin: 0 30px 25px;
+    padding: 20px 20px 25px;
+    border-left: 5px solid var(--accent2-color);
+    background-color: #f8fafb;
+}
+
+.history h2 {
+    margin-bottom: 18px;
+}
+
+.history-content {
+    display: grid;
+    grid-template-columns: 1fr 180px 1fr;
+    align-items: center;
+    gap: 20px;
+}
+
+.history-content p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.history-content img {
+    display: block;
+    width: 180px;
+    height: 115px;
+    object-fit: cover;
 }
 
 /* =========================================================
-   19. HISTORY SECTION
-   Adds spacing and a visual separation between sections.
+   ADVENTURES
+   Five figures span the section horizontally.
    ========================================================= */
 
-main section {
-  margin: 25px 30px;
-  padding: 20px;
+.adventures {
+    margin: 0 30px 25px;
+    padding: 18px 10px 20px;
+    border-left: 5px solid var(--accent2-color);
+    background-color: #f8fafb;
+}
 
-  border-left: 5px solid var(--accent2-color);
-  background-color: #f8fafb;
+.adventure-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+}
+
+.adventure-grid figure {
+    min-width: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.adventure-grid img {
+    display: block;
+    width: 100%;
+    height: 90px;
+    object-fit: cover;
+}
+
+.adventure-grid figcaption {
+    padding-top: 5px;
+    font-size: 0.72rem;
+    line-height: 1.2;
 }
 
 /* =========================================================
-   20. SECTION HEADINGS
-   Gives section headings better visual hierarchy.
-   ========================================================= */
-
-section h2 {
-  margin-bottom: 10px;
-}
-
-/* =========================================================
-   21. FOOTER
-   Creates a clean professional footer.
+   FOOTER
+   Keeps the previous orange footer style while placing the
+   three social images horizontally on the right.
    ========================================================= */
 
 footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  padding: 20px 30px;
-
-  background-color: var(--secondary-color);
-  color: #ffffff;
-
-  border-top: 4px solid var(--accent2-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 12px 30px;
+    background-color: var(--secondary-color);
+    color: var(--white);
+    border-top: 4px solid var(--accent2-color);
 }
-
-/* =========================================================
-   22. FOOTER COPYRIGHT
-   Removes unnecessary spacing around the copyright text.
-   ========================================================= */
 
 footer p {
-  margin: 0;
-  padding: 0;
-  color: #ffffff;
+    margin: 0;
+    color: var(--white);
+    font-size: 0.85rem;
 }
-
-/* =========================================================
-   23. SOCIAL MEDIA NAVIGATION
-   Places the social-media icons beside one another.
-   ========================================================= */
 
 .socialmedia {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-
-  margin: 0;
-  padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
 }
-
-/* =========================================================
-   24. SOCIAL MEDIA LINKS
-   Removes the default link underline.
-   ========================================================= */
 
 .socialmedia a {
-  text-decoration: none;
+    display: block;
+    text-decoration: none;
 }
-
-/* =========================================================
-   25. SOCIAL MEDIA IMAGES
-   Prevents the Facebook, LinkedIn and Instagram icons
-   from appearing extremely large.
-   ========================================================= */
 
 footer .socialmedia img {
-  width: 40px !important;
-  height: 40px !important;
+    display: block;
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
 
-  max-width: 40px;
-  max-height: 40px;
-
-  display: block;
-  object-fit: contain;
+.socialmedia img:hover,
+.socialmedia img:focus {
+    transform: scale(1.08);
 }
 
 /* =========================================================
-   26. SOCIAL MEDIA HOVER EFFECT
-   Slightly enlarges the icon when the mouse is over it.
-   ========================================================= */
-
-.socialmedia img:hover {
-  transform: scale(1.1);
-}
-
-/* =========================================================
-   27. RESPONSIVE DESIGN
-   Allows the website to adapt to tablets and mobile phones.
-   ========================================================= */
-
-/* =========================================================
-   28. TABLET SCREEN
-   Applies when the screen is 840px wide or smaller.
+   RESPONSIVE DESIGN
    ========================================================= */
 
 @media screen and (max-width: 840px) {
 
-  header,
-  main,
-  footer {
-    width: 100%;
-  }
+    header,
+    main,
+    footer {
+        width: 100%;
+    }
 
-  header {
-    padding: 15px 20px;
-  }
-
-  main {
-    padding: 0;
-  }
-
-  .hero > img {
-    width: 100%;
-  }
-
+    header {
+        padding: 12px 20px;
+    }
 }
-
-/* =========================================================
-   29. SMALL TABLET / LARGE PHONE
-   Adjusts the header and navigation for narrower screens.
-   ========================================================= */
 
 @media screen and (max-width: 700px) {
+    header {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 10px;
+    }
 
-  header {
-    flex-direction: column;
-    gap: 10px;
-  }
+    .navigation {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 
-  header nav ul {
-    justify-content: center;
-    flex-wrap: wrap;
-  }
+    .history-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
 
-  header nav a {
-    padding: 8px 10px;
-  }
+    .history-content img {
+        width: 180px;
+        margin: 0 auto;
+    }
 
-  footer {
-    flex-direction: column;
-    gap: 15px;
-    text-align: center;
-  }
+    .adventure-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
 }
 
-/* =========================================================
-   30. MOBILE PHONE
-   Provides a comfortable layout for small phone screens.
-   ========================================================= */
+@media screen and (max-width: 500px) {
+    header {
+        padding: 12px 10px;
+    }
 
-@media screen and (max-width: 600px) {
+    header img {
+        width: 100px;
+        height: 70px;
+    }
 
-  body {
-    font-size: 15px;
-  }
+    .navigation {
+        flex-direction: column;
+        width: 100%;
+    }
 
-  /* -------------------------
-     Header
-     ------------------------- */
+    .navigation li,
+    .navigation a {
+        width: 100%;
+        text-align: center;
+    }
 
-  header {
-    padding: 15px 10px;
-  }
+    .hero > img {
+        height: 350px;
+    }
 
-  header img {
-    width: 100px;
-  }
+    .hero h1 {
+        top: 10px;
+        padding: 10px;
+        font-size: 1.5rem;
+    }
 
-  header nav ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 3px;
-  }
+    .hero article {
+        position: relative;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        margin: 0;
+        border-radius: 0;
+    }
 
-  header nav a {
-    padding: 6px 12px;
-  }
+    .history,
+    .adventures {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
 
-  /* -------------------------
-     Hero section
-     ------------------------- */
+    .adventure-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
-  .hero {
-    margin-bottom: 15px;
-  }
-
-  .hero h1 {
-    top: 10px;
-    padding: 10px;
-    font-size: 1.5rem;
-  }
-
-  /* -------------------------
-     Hero article
-     ------------------------- */
-
-  .hero article {
-    position: relative;
-
-    left: auto;
-    right: auto;
-    bottom: auto;
-
-    margin: 0;
-    padding: 12px;
-
-    background-color: #ffffff;
-  }
-
-  .hero article img {
-    width: 100px;
-    margin-left: 10px;
-  }
-
-  /* -------------------------
-     Content sections
-     ------------------------- */
-
-  main section {
-    margin: 15px 10px;
-    padding: 15px;
-  }
-
-  /* -------------------------
-     Footer
-     ------------------------- */
-
-  footer {
-    padding: 15px 10px;
-  }
-
-  footer p {
-    margin: 0;
-  }
-
-  .socialmedia {
-    gap: 10px;
-  }
-
-  footer .socialmedia img {
-    width: 35px !important;
-    height: 35px !important;
-
-    max-width: 35px;
-    max-height: 35px;
-  }
-
+    footer {
+        padding: 12px 10px;
+    }
 }
