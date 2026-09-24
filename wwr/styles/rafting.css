@@ -11,7 +11,11 @@
     --accent1-color: #264653;
     --accent2-color: #e9c46a;
     --light-bg: #f5f8fa;
+    --section-bg: #f8fafb;
+    --hero-overlay: #264653eb;
+    --hero-article-bg: #fffffff0;
     --white: #ffffff;
+
     --heading-font: Georgia, "Times New Roman", serif;
     --body-font: Arial, Helvetica, sans-serif;
 }
@@ -150,7 +154,7 @@ h2 {
     width: 100%;
     padding: 14px;
     text-align: center;
-    background-color: rgba(38, 70, 83, 0.92);
+    background-color: var(--hero-overlay);
     color: var(--white);
     font-size: 2rem;
 }
@@ -163,7 +167,7 @@ h2 {
     min-height: 120px;
     margin: 0;
     padding: 15px;
-    background-color: rgba(255, 255, 255, 0.94);
+    background-color: var(--hero-article-bg);
     border-radius: 6px;
 }
 
@@ -191,7 +195,7 @@ h2 {
     margin: 0 30px 25px;
     padding: 20px 20px 25px;
     border-left: 5px solid var(--accent2-color);
-    background-color: #f8fafb;
+    background-color: var(--section-bg);
 }
 
 .history h2 {
@@ -226,7 +230,7 @@ h2 {
     margin: 0 30px 25px;
     padding: 18px 10px 20px;
     border-left: 5px solid var(--accent2-color);
-    background-color: #f8fafb;
+    background-color: var(--section-bg);
 }
 
 .adventure-grid {
