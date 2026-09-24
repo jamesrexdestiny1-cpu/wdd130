@@ -6,7 +6,6 @@
    File: wwr/styles/rafting.css
    ========================================================= */
 
-
 /* =========================================================
    1. COLOR AND FONT VARIABLES
    ========================================================= */
@@ -21,7 +20,6 @@
   --body-font: Arial, Helvetica, sans-serif;
 }
 
-
 /* =========================================================
    2. UNIVERSAL RESET
    Removes default browser spacing.
@@ -32,7 +30,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 
 /* =========================================================
    3. BODY
@@ -46,7 +43,6 @@ body {
   line-height: 1.6;
 }
 
-
 /* =========================================================
    4. MAIN PAGE WIDTH
    Keeps the website centered and limits the content width.
@@ -58,7 +54,6 @@ footer {
   width: 840px;
   margin: 0 auto;
 }
-
 
 /* =========================================================
    5. HEADER
@@ -76,7 +71,6 @@ header {
   border-bottom: 4px solid var(--accent2-color);
 }
 
-
 /* =========================================================
    6. LOGO
    Controls the size of the rafting company logo.
@@ -86,7 +80,6 @@ header img {
   width: 120px;
   height: auto;
 }
-
 
 /* =========================================================
    7. MAIN NAVIGATION
@@ -109,7 +102,6 @@ header nav ul {
   padding: 0;
 }
 
-
 /* =========================================================
    8. NAVIGATION LINKS
    Makes the navigation easier to read and more appealing.
@@ -125,7 +117,6 @@ header nav a {
   padding: 10px 14px;
   border-radius: 5px;
 }
-
 
 /* =========================================================
    9. NAVIGATION HOVER EFFECT
@@ -148,7 +139,6 @@ h2 {
   color: var(--primary-color);
 }
 
-
 /* =========================================================
    11. MAIN CONTENT
    Gives the main page some visual separation.
@@ -157,7 +147,6 @@ h2 {
 main {
   background-color: #ffffff;
 }
-
 
 /* =========================================================
    12. HERO CONTAINER
@@ -169,7 +158,6 @@ main {
   margin-bottom: 25px;
 }
 
-
 /* =========================================================
    13. HERO IMAGE
    Makes the main rafting image fill the content width.
@@ -180,7 +168,6 @@ main {
   width: 100%;
   height: auto;
 }
-
 
 /* =========================================================
    14. HERO HEADING
@@ -205,7 +192,6 @@ main {
   opacity: 0.9;
 }
 
-
 /* =========================================================
    15. HERO ARTICLE
    Creates the information box displayed over the hero.
@@ -226,7 +212,6 @@ main {
   border-radius: 6px;
 }
 
-
 /* =========================================================
    16. CLIENT / EMPLOYEE IMAGE
    Floats the smaller image to the right so the text wraps
@@ -244,7 +229,6 @@ main {
   border-radius: 5px;
 }
 
-
 /* =========================================================
    17. HERO ARTICLE PARAGRAPH
    Controls the introductory paragraph inside the hero.
@@ -254,7 +238,6 @@ main {
   margin: 0;
   padding: 0;
 }
-
 
 /* =========================================================
    18. GENERAL NAVIGATION, PARAGRAPH, SECTION AND ARTICLE
@@ -269,7 +252,6 @@ article {
   padding: 8px;
 }
 
-
 /* =========================================================
    19. HISTORY SECTION
    Adds spacing and a visual separation between sections.
@@ -283,7 +265,6 @@ main section {
   background-color: #f8fafb;
 }
 
-
 /* =========================================================
    20. SECTION HEADINGS
    Gives section headings better visual hierarchy.
@@ -292,7 +273,6 @@ main section {
 section h2 {
   margin-bottom: 10px;
 }
-
 
 /* =========================================================
    21. FOOTER
@@ -306,12 +286,11 @@ footer {
 
   padding: 20px 30px;
 
-  background-color: var(--accent1-color);
+  background-color: var(--secondary-color);
   color: #ffffff;
 
   border-top: 4px solid var(--accent2-color);
 }
-
 
 /* =========================================================
    22. FOOTER COPYRIGHT
@@ -323,7 +302,6 @@ footer p {
   padding: 0;
   color: #ffffff;
 }
-
 
 /* =========================================================
    23. SOCIAL MEDIA NAVIGATION
@@ -339,7 +317,6 @@ footer p {
   padding: 0;
 }
 
-
 /* =========================================================
    24. SOCIAL MEDIA LINKS
    Removes the default link underline.
@@ -348,7 +325,6 @@ footer p {
 .socialmedia a {
   text-decoration: none;
 }
-
 
 /* =========================================================
    25. SOCIAL MEDIA IMAGES
@@ -367,8 +343,6 @@ footer .socialmedia img {
   object-fit: contain;
 }
 
-
-
 /* =========================================================
    26. SOCIAL MEDIA HOVER EFFECT
    Slightly enlarges the icon when the mouse is over it.
@@ -382,7 +356,6 @@ footer .socialmedia img {
    27. RESPONSIVE DESIGN
    Allows the website to adapt to tablets and mobile phones.
    ========================================================= */
-
 
 /* =========================================================
    28. TABLET SCREEN
@@ -410,7 +383,6 @@ footer .socialmedia img {
   }
 
 }
-
 
 /* =========================================================
    29. SMALL TABLET / LARGE PHONE
@@ -441,7 +413,6 @@ footer .socialmedia img {
 
 }
 
-
 /* =========================================================
    30. MOBILE PHONE
    Provides a comfortable layout for small phone screens.
@@ -452,7 +423,6 @@ footer .socialmedia img {
   body {
     font-size: 15px;
   }
-
 
   /* -------------------------
      Header
@@ -476,7 +446,6 @@ footer .socialmedia img {
     padding: 6px 12px;
   }
 
-
   /* -------------------------
      Hero section
      ------------------------- */
@@ -490,7 +459,6 @@ footer .socialmedia img {
     padding: 10px;
     font-size: 1.5rem;
   }
-
 
   /* -------------------------
      Hero article
@@ -514,7 +482,6 @@ footer .socialmedia img {
     margin-left: 10px;
   }
 
-
   /* -------------------------
      Content sections
      ------------------------- */
@@ -523,7 +490,6 @@ footer .socialmedia img {
     margin: 15px 10px;
     padding: 15px;
   }
-
 
   /* -------------------------
      Footer
