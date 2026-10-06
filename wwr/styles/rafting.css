@@ -47,10 +47,10 @@ footer {
 
 header {
     display: grid;
-    grid-template-columns: 140px 1fr;
+    grid-template-columns: 130px 1fr;
     align-items: center;
-    gap: 25px;
-    padding: 12px 30px;
+    gap: 20px;
+    padding: 12px 24px;
     background-color: var(--white);
     border-bottom: 4px solid var(--accent2-color);
 }
@@ -69,7 +69,7 @@ header img {
 
 /* =========================================================
    NAVIGATION - CSS FLEXBOX
-   The navigation list arranges the links horizontally.
+   Consistent navigation across all pages.
    ========================================================= */
 
 header nav {
@@ -81,6 +81,7 @@ header nav {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    gap: 4px;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -92,19 +93,26 @@ header nav {
 
 .navigation a {
     display: block;
-    padding: 8px 14px;
+    padding: 9px 12px;
     color: var(--accent1-color);
     text-align: center;
     text-decoration: none;
     font-weight: bold;
     border: none;
-    border-radius: 10px;
-    background-color: var(--white);
-    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 6px;
+    background-color: transparent;
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
 }
 
 .navigation a:hover,
 .navigation a:focus {
+    color: var(--white);
+    background-color: var(--primary-color);
+}
+
+.navigation a[aria-current="page"] {
     color: var(--white);
     background-color: var(--primary-color);
 }
@@ -479,7 +487,7 @@ footer p {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    gap: 8px;
+    gap: 12px;
     margin: 0;
     padding: 0;
 }
@@ -491,14 +499,274 @@ footer p {
 
 footer .socialmedia img {
     display: block;
-    width: 32px;
-    height: 32px;
+    width: 38px;
+    height: 38px;
     object-fit: contain;
+    transition: transform 0.3s ease;
 }
 
 .socialmedia img:hover,
 .socialmedia img:focus {
     transform: scale(1.08);
+}
+
+/* =========================================================
+   HOME PAGE
+   ========================================================= */
+
+.home-hero > img {
+    height: 410px;
+}
+
+.home-introduction {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+    padding: 3rem 2rem;
+}
+
+.home-introduction-text {
+    max-width: 500px;
+    padding: 1rem;
+}
+
+.home-introduction-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.section-label {
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+    font-size: 0.78rem;
+    font-weight: bold;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+}
+
+.home-offerings {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 2.5rem 2rem;
+    background-color: var(--section-bg);
+}
+
+.home-offering-card {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 1.25rem;
+    align-items: center;
+    padding: 1.25rem;
+    background-color: var(--white);
+    border-left: 5px solid var(--accent2-color);
+}
+
+.home-offering-card img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.home-offering-card h2 {
+    text-align: left;
+}
+
+.home-cta,
+.trips-cta {
+    padding: 3rem 2rem;
+    text-align: center;
+    background-color: var(--accent1-color);
+    color: var(--white);
+}
+
+.home-cta h2,
+.trips-cta h2 {
+    color: var(--white);
+}
+
+.home-cta p,
+.trips-cta p {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--accent2-color);
+    color: var(--accent1-color);
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover,
+.cta-button:focus {
+    background-color: var(--secondary-color);
+}
+
+.newsletter {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+    padding: 3rem 2rem;
+    background-color: var(--light-bg);
+}
+
+.newsletter-content {
+    max-width: 500px;
+}
+
+.newsletter-form {
+    display: grid;
+    gap: 1rem;
+}
+
+.newsletter-form label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-weight: bold;
+}
+
+.newsletter-form input {
+    width: 100%;
+    padding: 0.7rem;
+    border: 1px solid #9aaab5;
+    box-sizing: border-box;
+    font-family: var(--body-font);
+}
+
+.newsletter-form button {
+    width: fit-content;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-family: var(--body-font);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.newsletter-form button:hover,
+.newsletter-form button:focus {
+    background-color: var(--accent1-color);
+}
+
+/* =========================================================
+   TRIPS PAGE
+   ========================================================= */
+
+.trips-hero > img {
+    height: 390px;
+}
+
+.trips-introduction {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.trip-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    padding: 30px;
+    background-color: var(--section-bg);
+}
+
+.trip-card {
+    display: grid;
+    grid-template-rows: 220px 1fr;
+    background-color: var(--white);
+    border-top: 5px solid var(--accent2-color);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+.trip-card:last-child {
+    grid-column: 1 / -1;
+}
+
+.trip-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.trip-card-content {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+}
+
+.trip-card-content h2 {
+    margin-top: 0.25rem;
+}
+
+.trip-card-content p {
+    margin-bottom: 1rem;
+}
+
+.trip-card-content ul {
+    margin-top: auto;
+    padding-left: 1.2rem;
+}
+
+.trip-table-section {
+    padding: 3rem 2rem;
+    background-color: var(--white);
+}
+
+.trip-table-section > h2,
+.trip-table-section > .section-label {
+    text-align: center;
+}
+
+.trip-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+}
+
+.trip-table-wrapper table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 650px;
+}
+
+.trip-table-wrapper caption {
+    margin-bottom: 1rem;
+    font-weight: bold;
+    color: var(--accent1-color);
+}
+
+.trip-table-wrapper th,
+.trip-table-wrapper td {
+    padding: 0.75rem;
+    border: 1px solid #b8c4cb;
+    text-align: left;
+}
+
+.trip-table-wrapper thead th {
+    background-color: var(--accent1-color);
+    color: var(--white);
+}
+
+.trip-table-wrapper tbody tr:nth-child(even) {
+    background-color: var(--section-bg);
+}
+
+.trips-cta {
+    background-color: var(--accent1-color);
 }
 
 /* =========================================================
@@ -519,6 +787,7 @@ footer .socialmedia img {
 }
 
 @media screen and (max-width: 700px) {
+
     header {
         grid-template-columns: 1fr;
         justify-items: center;
@@ -528,6 +797,48 @@ footer .socialmedia img {
     .navigation {
         justify-content: center;
         flex-wrap: wrap;
+        gap: 4px;
+    }
+
+    .navigation a {
+        padding: 8px 10px;
+    }
+
+    .home-introduction {
+        grid-template-columns: 1fr;
+        padding: 2rem 1.5rem;
+    }
+
+    .home-introduction-text {
+        max-width: none;
+    }
+
+    .home-introduction-image img {
+        height: 280px;
+    }
+
+    .home-offerings {
+        grid-template-columns: 1fr;
+        padding: 2rem 1.5rem;
+    }
+
+    .newsletter {
+        grid-template-columns: 1fr;
+        padding: 2rem 1.5rem;
+    }
+
+    .trip-grid {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .trip-card:last-child {
+        grid-column: auto;
+    }
+
+    .contact-intro {
+        grid-template-columns: 1fr;
+        padding: 20px;
     }
 
     .history-content {
@@ -544,11 +855,6 @@ footer .socialmedia img {
         grid-template-columns: repeat(3, 1fr);
     }
 
-    .contact-intro {
-        grid-template-columns: 1fr;
-        padding: 20px;
-    }
-
     .employee-grid {
         grid-template-columns: repeat(3, 1fr);
         gap: 15px;
@@ -558,9 +864,14 @@ footer .socialmedia img {
         flex-direction: column;
         text-align: center;
     }
+
+    .socialmedia {
+        justify-content: center;
+    }
 }
 
 @media screen and (max-width: 500px) {
+
     header {
         padding: 12px 10px;
     }
@@ -571,14 +882,18 @@ footer .socialmedia img {
     }
 
     .navigation {
-        flex-direction: column;
         width: 100%;
+        justify-content: center;
     }
 
-    .navigation li,
+    .navigation li {
+        flex: 0 1 auto;
+    }
+
     .navigation a {
-        width: 100%;
-        text-align: center;
+        width: auto;
+        padding: 8px 10px;
+        font-size: 0.9rem;
     }
 
     .hero > img {
@@ -598,6 +913,47 @@ footer .socialmedia img {
         bottom: auto;
         margin: 0;
         border-radius: 0;
+    }
+
+    .home-introduction {
+        padding: 2rem 1rem;
+    }
+
+    .home-offerings {
+        padding: 1.5rem 1rem;
+    }
+
+    .home-offering-card {
+        grid-template-columns: 1fr;
+    }
+
+    .home-offering-card img {
+        width: 100%;
+        height: 220px;
+    }
+
+    .home-offering-card h2 {
+        text-align: center;
+    }
+
+    .newsletter {
+        padding: 2rem 1rem;
+    }
+
+    .trip-grid {
+        padding: 15px;
+    }
+
+    .trip-card {
+        grid-template-rows: 200px 1fr;
+    }
+
+    .trip-card img {
+        height: 200px;
+    }
+
+    .trip-table-section {
+        padding: 2rem 1rem;
     }
 
     .history,
@@ -630,5 +986,10 @@ footer .socialmedia img {
 
     footer {
         padding: 12px 10px;
+    }
+
+    footer .socialmedia img {
+        width: 36px;
+        height: 36px;
     }
 }
