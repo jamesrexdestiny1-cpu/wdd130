@@ -103,13 +103,22 @@ header nav {
     background-color: transparent;
     transition:
         background-color 0.3s ease,
-        color 0.3s ease;
+        color 0.3s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
 .navigation a:hover,
 .navigation a:focus {
     color: var(--white);
     background-color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+}
+
+.navigation a:focus-visible {
+    outline: 2px solid var(--accent2-color);
+    outline-offset: 2px;
 }
 
 .navigation a[aria-current="page"] {
@@ -282,11 +291,17 @@ h2 {
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
+    transition:
+        background-color 0.3s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
 .contact-form button:hover,
 .contact-form button:focus {
     background-color: var(--accent1-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 /* =========================================================
@@ -502,12 +517,20 @@ footer .socialmedia img {
     width: 38px;
     height: 38px;
     object-fit: contain;
-    transition: transform 0.3s ease;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.2s ease;
 }
 
-.socialmedia img:hover,
-.socialmedia img:focus {
-    transform: scale(1.08);
+.socialmedia a:hover img,
+.socialmedia a:focus img {
+    transform: translateY(-3px) scale(1.08);
+}
+
+.socialmedia a:focus-visible {
+    outline: 2px solid var(--accent1-color);
+    outline-offset: 3px;
+    border-radius: 4px;
 }
 
 /* =========================================================
@@ -548,31 +571,59 @@ footer .socialmedia img {
 }
 
 .home-offerings {
+    max-width: 1100px;
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
-    padding: 2.5rem 2rem;
+    padding: 3.5rem 2rem;
     background-color: var(--section-bg);
 }
 
 .home-offering-card {
     display: grid;
-    grid-template-columns: 150px 1fr;
-    gap: 1.25rem;
-    align-items: center;
-    padding: 1.25rem;
+    grid-template-rows: 240px 1fr;
+    overflow: hidden;
     background-color: var(--white);
-    border-left: 5px solid var(--accent2-color);
+    border-top: 5px solid var(--accent2-color);
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    border-radius: 4px;
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.home-offering-card:hover,
+.home-offering-card:focus-within {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
 }
 
 .home-offering-card img {
-    width: 150px;
-    height: 150px;
+    width: 100%;
+    height: 240px;
     object-fit: cover;
+    display: block;
 }
 
-.home-offering-card h2 {
+.home-offering-content {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 1.75rem 1.75rem;
+}
+
+.home-offering-content .section-label {
+    margin: 0 0 0.5rem;
+}
+
+.home-offering-content h2 {
+    margin: 0 0 1rem;
     text-align: left;
+}
+
+.home-offering-content p:last-child {
+    margin: 0;
+    line-height: 1.7;
 }
 
 .home-cta,
@@ -604,12 +655,24 @@ footer .socialmedia img {
     font-weight: bold;
     text-decoration: none;
     border-radius: 4px;
-    transition: background-color 0.3s ease;
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
 .cta-button:hover,
 .cta-button:focus {
     background-color: var(--secondary-color);
+    color: var(--accent1-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.cta-button:focus-visible {
+    outline: 2px solid var(--white);
+    outline-offset: 3px;
 }
 
 .newsletter {
@@ -623,6 +686,11 @@ footer .socialmedia img {
 
 .newsletter-content {
     max-width: 500px;
+    text-align: left;
+}
+
+.newsletter-content h2 {
+    text-align: left;
 }
 
 .newsletter-form {
@@ -653,11 +721,22 @@ footer .socialmedia img {
     font-family: var(--body-font);
     font-weight: bold;
     cursor: pointer;
+    transition:
+        background-color 0.3s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
 .newsletter-form button:hover,
 .newsletter-form button:focus {
     background-color: var(--accent1-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.newsletter-form button:focus-visible {
+    outline: 2px solid var(--accent2-color);
+    outline-offset: 3px;
 }
 
 /* =========================================================
@@ -690,6 +769,15 @@ footer .socialmedia img {
     border-top: 5px solid var(--accent2-color);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     overflow: hidden;
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.trip-card:hover,
+.trip-card:focus-within {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
 }
 
 .trip-card:last-child {
@@ -770,6 +858,23 @@ footer .socialmedia img {
 }
 
 /* =========================================================
+   MOTION ACCESSIBILITY
+   Respects users who prefer reduced motion.
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}
+
+/* =========================================================
    RESPONSIVE DESIGN
    ========================================================= */
 
@@ -819,7 +924,16 @@ footer .socialmedia img {
 
     .home-offerings {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
         padding: 2rem 1.5rem;
+    }
+
+    .home-offering-card {
+        grid-template-rows: 220px 1fr;
+    }
+
+    .home-offering-card img {
+        height: 220px;
     }
 
     .newsletter {
