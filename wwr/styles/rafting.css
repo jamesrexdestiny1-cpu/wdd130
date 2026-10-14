@@ -117,7 +117,7 @@ header nav {
 }
 
 .navigation a:focus-visible {
-    outline: 2px solid var(--accent2-color);
+    outline: 2px solid var(--accent1-color);
     outline-offset: 2px;
 }
 
@@ -488,7 +488,7 @@ footer {
     gap: 20px;
     padding: 12px 30px;
     background-color: var(--secondary-color);
-    color: var(--white);
+    color: var(--accent1-color);
     border-top: 4px solid var(--accent2-color);
 }
 
@@ -735,7 +735,7 @@ footer .socialmedia img {
 }
 
 .newsletter-form button:focus-visible {
-    outline: 2px solid var(--accent2-color);
+    outline: 2px solid var(--accent1-color);
     outline-offset: 3px;
 }
 
